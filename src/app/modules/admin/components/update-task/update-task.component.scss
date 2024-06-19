@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+}
+
+
+h2{
+    font-weight: bold;
+    color: rgb(69, 58, 215);
+    font-size: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+mat-form-field{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    h2{
+        font-size: 20px;
+    }
+
+    mat-form-field{
+        margin-bottom: 10px;
+    }
+}
+
+.errror-snackbar{
+    background-color: red !important;
+}

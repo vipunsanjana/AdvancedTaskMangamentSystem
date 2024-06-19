@@ -1,0 +1,63 @@
+<div *ngIf="taskData" class="card-container">
+    <div class="task-list">
+      <mat-card class="task-card">
+        <div class="task-details">
+          <h2 class="task-name">{{ taskData.title }}</h2>
+          <p class="task-description">{{ taskData.description }}</p>
+  
+          <mat-divider></mat-divider>
+          <div class="task-info">
+            <div class="info-row">
+              <span class="info-label">Due Date:</span>
+              <span class="info-value">{{ taskData.dueDate | date:'dd MMM yyyy' }}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Priority:</span>
+              <span class="info-value">{{ taskData.priority }}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Employee:</span>
+              <span class="info-value">{{ taskData.employeeName }}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Status:</span>
+              <span class="info-value">{{ taskData.taskStatus }}</span>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+  
+      <mat-card class="comment-card">
+        <mat-card-content>
+          <h4>Publish Your Comment</h4>
+          <div>
+            <form [formGroup]="commentForm">
+              <mat-form-field>
+                <mat-label>Content</mat-label>
+                <textarea matInput formControlName="content"></textarea>
+              </mat-form-field>
+              <button mat-raised-button color="primary" style="float: right;" [disabled]="!commentForm.valid" (click)="publishComment()">Publish Comment</button>
+            </form>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- Second column for comments -->
+    <div class="comments-column">
+      <div style="margin-top: 10px;">
+        <h4>Comments</h4>
+        <mat-card *ngFor="let comment of comments" style="margin-top: 10px;">
+          <mat-card-header>
+            <img src="../../../../../assets/shiba-inu.png" alt="">
+            <mat-card-title>{{ comment.postedBy }}</mat-card-title>
+            <mat-card-subtitle>{{ comment.createdAt | date:'medium' }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            {{ comment.content }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

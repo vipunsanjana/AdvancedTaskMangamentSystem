@@ -1,0 +1,112 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 82vh;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 20px;
+    width: 50%; /* Adjusted width for first column */
+  }
+  
+  .task-card,
+  .comment-card {
+    width: 100%; /* Full width for single column layout */
+    margin-bottom: 20px; /* Increased margin between cards */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 10px; /* Added padding for card content */
+  }
+  
+  .comment-card {
+    margin-top: 20px; /* Added margin top to separate from task card */
+  }
+  
+  .comments-column {
+    width: 50%; /* Width for second column */
+    padding-left: 20px; /* Left padding for separation */
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .task-details {
+    padding: 10px;
+  }
+
+  h4{
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+  }
+  
+  .task-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(39, 60, 221);
+    margin-bottom: 10px;
+  }
+  
+  .task-description {
+    margin-bottom: 10px;
+  }
+  
+  .task-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .info-row {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .info-value {
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .update-button {
+    margin-right: 10px;
+  }
+  
+  .view-button {
+    margin-right: 10px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-card-content {
+    margin-top: 10px;
+  }
+  
+  img {
+    margin-left: 50px;
+    margin-top: 10px;
+    height: 60px; /* Example height for background image */
+    width: 60px; /* Example width for background image */
+    border-radius: 50%; /* Example border radius for circular shape */
+  }

@@ -1,0 +1,46 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.navbar-brand{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+button{
+    color: aliceblue;
+    text-transform: uppercase;
+    margin-left: 8px;
+    background-color: rgb(8, 7, 5);
+}
+
+button.active{
+    font-weight: 600;
+    color: black;
+    background-color: aliceblue;
+}
+
+.custom-toolbar{
+    background-color: red;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
